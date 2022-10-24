@@ -17,4 +17,7 @@ jobs:
         tar -xzvf graalvm-ce-java17-linux-amd64-22.2.0.tar.gz
         ls -al graalvm-ce-java17-22.2.0
         graalvm-ce-java17-22.2.0/bin/java --version
+        export JAVA_HOME=graalvm-ce-java17-22.2.0
+        ./mvnw spring-boot:build-image -Pnative
+        docker images ls
         
