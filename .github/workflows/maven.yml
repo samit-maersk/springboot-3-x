@@ -1,0 +1,20 @@
+name: Build & Push
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Download Graal VM Java and keep it in the classpath
+      run: |
+        wget -O ${{ env.GITHUB_WORKSPACE }}/graalvm-ce-java11-linux-amd64-22.2.0.tar.gz https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java11-linux-amd64-22.2.0.tar.gz
+        tar -xzvf ${{ env.GITHUB_WORKSPACE }}/graalvm-ce-java11-linux-amd64-22.2.0.tar.gz
+        ls -al ${{ env.GITHUB_WORKSPACE }}/graalvm-ce-java11-linux-amd64-22.2.0
+        ${{ env.GITHUB_WORKSPACE }}/graalvm-ce-java11-linux-amd64-22.2.0/Contents/Home/bin/java --version
+        
