@@ -16,5 +16,5 @@ jobs:
         wget -q https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.2.0/graalvm-ce-java11-linux-amd64-22.2.0.tar.gz
         tar -xzvf graalvm-ce-java11-linux-amd64-22.2.0.tar.gz
         ls -al graalvm-ce-java11-22.2.0
-        graalvm-ce-java11-22.2.0/Contents/Home/bin/java --version
+        graalvm-ce-java11-22.2.0/bin/java --version
         
