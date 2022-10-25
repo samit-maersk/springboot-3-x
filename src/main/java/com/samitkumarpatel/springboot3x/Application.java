@@ -1,4 +1,4 @@
-package com.samitkumarpatel.springboot3.x;
+package com.samitkumarpatel.springboot3x;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

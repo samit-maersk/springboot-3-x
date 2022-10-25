@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.0-RC1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.samitkumarpatel</groupId>
-	<artifactId>springboot-3.x</artifactId>
+	<artifactId>springboot-3-x</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-3.x</name>
+	<name>springboot-3-x</name>
 	<description>Spring Boot 3.x</description>
 	<properties>
 		<java.version>17</java.version>
@@ -45,6 +45,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+
+					<mainClass>com.samitkumarpatel.springboot3x.Application</mainClass>
+
 					<image>
 						<buildpacks>
 							<buildpack>gcr.io/paketo-buildpacks/bellsoft-liberica:9.9.0-ea</buildpack>
